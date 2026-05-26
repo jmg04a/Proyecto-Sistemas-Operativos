@@ -42,12 +42,8 @@
                 <label class="control-label" for="correo">Correo</label>
                 <input type="mail" name="correo" id="" class="form-control" required>
             </div>
-            <div class="mb-3">
-                <label class="control-label" for="nombre">Nombre</label>
-                <input type="text" name="" id="" class="form-control" required>
-            </div>
             <?php 
-                include '../class/database.php';
+                include '../class/Database.php';
                 $conexion=new Database();
                 $conexion->conectarDB();
 

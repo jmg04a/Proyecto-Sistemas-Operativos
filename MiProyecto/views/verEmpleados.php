@@ -10,24 +10,24 @@
     <div class="container">
         <h1 align="center">Empleados</h1>
         <?php
-        include '/opt/lampp/htdocs/database.php';
+        include '../class/Database.php';
         $conexion=new Database();
         $conexion->conectarDB();
-        $constulta="SELECT e.*, d.nombreDepart FROM empleado e JOIN departamento d ON e.depaFK = d.idDepart";
+        $constulta="SELECT e.*, d.nombreDepa FROM empleado e JOIN departamento d ON e.depaFK = d.idDepa";
         $tabla=$conexion->Seleccionar($constulta);
 
         echo "
         <table class='table table-hover'>
         <thead class ='table-dark'>
             <tr>
-                <th>idEmpleado</th>
+                <th>idEmp</th>
                 <th>nombre</th>
-                <th>apPaterno</th>
-                <th>apMaterno</th>
+                <th>apat</th>
+                <th>amat</th>
                 <th>direccion</th>
                 <th>telefono</th>
                 <th>correo</th>
-                <th>nombreDepart</th>
+                <th>nombreDepa</th>
             </tr>
         </thead>
         <tbody>";
@@ -35,14 +35,14 @@
         foreach($tabla as $reg)
         {
             echo "<tr>";
-            echo "<td> $reg->idEmpleado</td>";
+            echo "<td> $reg->idEmp</td>";
             echo "<td> $reg->nombre</td>";
-            echo "<td> $reg->apPaterno</td>";
-            echo "<td> $reg->apMaterno</td>";
+            echo "<td> $reg->apat</td>";
+            echo "<td> $reg->amat</td>";
             echo "<td> $reg->direccion</td>";
             echo "<td> $reg->telefono</td>";
             echo "<td> $reg->correo</td>";
-            echo "<td> $reg->nombreDepart</td>";
+            echo "<td> $reg->nombreDepa</td>";
         }
         echo "</tbody>
         </table>";
