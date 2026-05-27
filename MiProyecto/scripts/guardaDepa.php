@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <title>Empleado</title>
+    <title>Departamento</title>
 </head>
 <body>
     <div class="container">
@@ -15,14 +15,14 @@
             $db->conectarDB();
             extract($_POST);
 
-            $query = "INSERT INTO empleado(nombre,apat,amat,direccion,telefono,correo,depaFK)
-             VALUES ('$nombre','$apaterno','$amaterno','$direccion','$telefono','$correo',$depa)";
+            $query = "INSERT INTO departamento(nombreDepa,fechaCreacion)
+             VALUES ('$nombre','$fecha')";
             
             $db->ejecutar($query);
             
             echo "
             <div class='alert alert-success'>
-            Empleado Registrado
+            Departamento Registrado
             </div>
             ";
             header("refresh:3; ../index.php");

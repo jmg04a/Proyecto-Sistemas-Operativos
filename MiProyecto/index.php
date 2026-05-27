@@ -27,7 +27,7 @@
                     <li><a class="dropdown-item" href="views/verDeptos.php">Departamentos</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="views/formAltaEmpleado.php">Registrar Empleado</a></li>
-                    <li><a class="dropdown-item" href="#">Registrar Departamento</a></li>
+                    <li><a class="dropdown-item" href="views/formAltaDepa.php">Registrar Departamento</a></li>
                 </ul>
                 </li>
                 

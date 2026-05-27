@@ -21,7 +21,7 @@
         <h2>Alta Empleado</h2>
         <hr>
 
-        <form action="" method="post">
+        <form action="../scripts/guardaEmpleado.php" method="post">
             <div class="mb-3">
                 <label class="control-label" for="nombre">Nombre</label>
                 <input type="text" name="nombre" id="" class="form-control" required>
@@ -29,6 +29,10 @@
             <div class="mb-3">
                 <label class="control-label" for="apaterno">Apellido Paterno</label>
                 <input type="text" name="apaterno" id="" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="control-label" for="amaterno">Apellido Materno</label>
+                <input type="text" name="amaterno" id="" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label class="control-label" for="direccion">Direccion</label>
@@ -71,11 +75,7 @@
             <div class='d-grid gab-2'>
                 <button class="btn btn-primary btn-lg">Guardar</button>
             </div>
-
         </form>
-
-        
-
     </div>
 </body>
 </html>
