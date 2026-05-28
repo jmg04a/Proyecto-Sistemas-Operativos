@@ -28,6 +28,10 @@
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="views/formAltaEmpleado.php">Registrar Empleado</a></li>
                     <li><a class="dropdown-item" href="views/formAltaDepa.php">Registrar Departamento</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="views/BuscarEmpleado.php">Buscar Empleado</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="views/EmpxDepto.php">Empleados por departamento</a></li>
                 </ul>
                 </li>
                 
