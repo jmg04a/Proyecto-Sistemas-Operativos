@@ -16,7 +16,7 @@
     <title>Registros Departamento</title>
 </head>
 <body>
-    <div class="container" ancho>
+    <div class="container ancho">
 
         <h2>Alta Departamento</h2>
         <hr>

@@ -9,6 +9,7 @@
 <body>
     <div class="container">
         <h1 align="center">Departamentos</h1>
+        <br>
         <?php
         include '../class/Database.php';
         $conexion=new Database();

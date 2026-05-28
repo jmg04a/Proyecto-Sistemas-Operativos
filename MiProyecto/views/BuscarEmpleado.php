@@ -4,20 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        .ancho{
+            width: 50%;
+            margin: auto;
+        }
+        body{
+            margin-top: 30px;
+        }
+    </style>
     <title>Buscar Empleado</title>
 </head>
 <body>
-    <h1>Buscar Empleados por nombre</h1>
-    <form action="" method="post">
-    <div class="mb-3">
-        <label class="control-label" for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="" class="form-control" required>
+
+    <h1 align="center">Buscar Empleados por nombre</h1>
+    <br>
+    <div class="container ancho">
+        <form action="" method="post">
+        <div class="mb-3">
+            <label class="control-label" for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="" class="form-control" required>
+        </div>
+        <div class='d-grid gab-2'>
+            <button class="btn btn-primary btn-lg">Buscar</button>
+        </div>
+        <br>
+        </form>
     </div>
-    <div class='d-grid gab-2'>
-        <button class="btn btn-primary btn-lg">Buscar</button>
-      </div>
     <div class="container">
-        <h1 align="center">Empleados Encontrados</h1>
+        <h2 align="center">Empleados Encontrados</h1>
+        <br>
         <?php
         include '../class/Database.php';
         $nombre=$_POST['nombre']; 
@@ -59,6 +75,6 @@
         $conexion->DesconectarDB();
         ?>
     </div>
-    </form>
+
 </body>
 </html>

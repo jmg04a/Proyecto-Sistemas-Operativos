@@ -4,40 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        .ancho{
+            width: 50%;
+            margin: auto;
+        }
+        body{
+            margin-top: 30px;
+        }
+    </style>
     <title>Empleados por departamento</title>
 </head>
 <body>
-    <h1>Buscar Empleados por departamento</h1>
-    <form action="" method="post">
-    <?php 
-        include '../class/Database.php';
-        $conexion=new Database();
-        $conexion->conectarDB();
+    <h1 align="center">Buscar Empleados por departamento</h1>
+    <div class="container ancho">
+        <form action="" method="post">
+            <?php 
+                include '../class/Database.php';
+                $conexion=new Database();
+                $conexion->conectarDB();
 
-        $consulta="select idDepa,nombreDepa FROM departamento";
-        $reg = $conexion->seleccionar($consulta);
+                $consulta="select idDepa,nombreDepa FROM departamento";
+                $reg = $conexion->seleccionar($consulta);
 
-        echo "
-        <div class='mb-3'>
-        <label class='control-label'>Departamento</label>
-        <select name='depa' class='form-select'>";
+                echo "
+                <div class='mb-3'>
+                <label class='control-label'>Departamento</label>
+                <select name='depa' class='form-select'>";
 
-            foreach($reg as $value){
-                echo "<option value='".$value->idDepa."'>".
-                $value->nombreDepa."</option>";
-            }
+                    foreach($reg as $value){
+                        echo "<option value='".$value->idDepa."'>".
+                        $value->nombreDepa."</option>";
+                    }
 
-        echo "
-        </select>
-        </div>";
-        $conexion->desconectarDB();
-    ?>
-    <br>
-    <div class='d-grid gab-2'>
-        <button class="btn btn-primary btn-lg">Buscar</button>
-      </div>
+                echo "
+                </select>
+                </div>";
+                $conexion->desconectarDB();
+            ?>
+        <br>
+        <div class='d-grid gab-2'>
+            <button class="btn btn-primary btn-lg">Buscar</button>
+        </div>
+        <br>
+        </form>
+    </div>
     <div class="container">
-        <h1 align="center">Empleados Encontrados</h1>
+        <h2 align="center">Empleados Encontrados</h2>
+        <br>
         <?php
         $depa=$_POST['depa']; 
         $conexion=new Database();
@@ -78,6 +92,5 @@
         $conexion->DesconectarDB();
         ?>
     </div>
-    </form>
 </body>
 </html>

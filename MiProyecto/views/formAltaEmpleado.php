@@ -16,7 +16,7 @@
     <title>Registros Empleado</title>
 </head>
 <body>
-    <div class="container" ancho>
+    <div class="container ancho">
 
         <h2>Alta Empleado</h2>
         <hr>
