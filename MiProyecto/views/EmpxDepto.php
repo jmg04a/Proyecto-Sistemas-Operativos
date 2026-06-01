@@ -30,7 +30,9 @@
                 echo "
                 <div class='mb-3'>
                 <label class='control-label'>Departamento</label>
-                <select name='depa' class='form-select'>";
+                <select name='depa' class='form-select'>
+                ";
+                
 
                     foreach($reg as $value){
                         echo "<option value='".$value->idDepa."'>".
@@ -53,7 +55,7 @@
         <h2 align="center">Empleados Encontrados</h2>
         <br>
         <?php
-        $depa=$_POST['depa']; 
+        $depa=$_POST['depa'] ?? '99999999'; 
         $conexion=new Database();
         $conexion->conectarDB();
         $constulta="SELECT e.* , d.nombreDepa FROM empleado e JOIN departamento d ON e.depaFK = d.idDepa WHERE e.depaFK = $depa";

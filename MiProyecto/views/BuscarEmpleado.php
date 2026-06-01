@@ -36,7 +36,7 @@
         <br>
         <?php
         include '../class/Database.php';
-        $nombre=$_POST['nombre']; 
+        $nombre=$_POST['nombre'] ?? ''; 
         $conexion=new Database();
         $conexion->conectarDB();
         $constulta="SELECT e.* , d.nombreDepa FROM empleado e JOIN departamento d ON e.depaFK = d.idDepa WHERE e.nombre LIKE '%$nombre%'";
